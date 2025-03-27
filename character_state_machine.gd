@@ -5,7 +5,8 @@ class_name CharacterStateMachine extends Node
 @onready var character := get_parent()
 
 var current_state : State
-var states : Dictionary = {}
+var states : Dictionary[String, State] = {}
+
 
 func _ready() -> void:
 	for child in get_children():
